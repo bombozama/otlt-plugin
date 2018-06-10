@@ -1,0 +1,40 @@
+columns:
+    id:
+        label: bombozama.otlt::lang.columns.id
+        type: number
+        searchable: 1
+        sortable: 1
+    name:
+        label: bombozama.otlt::lang.columns.name
+        type: text
+        searchable: 1
+        sortable: 1
+    extra:
+        label: bombozama.otlt::lang.columns.extra
+        type: text
+        searchable: 1
+        sortable: 1
+        invisible: 1
+    is_published:
+        label: bombozama.otlt::lang.columns.is_published
+        type: switch
+        sortable: 1
+    user_name:
+        label: bombozama.otlt::lang.columns.user_name
+        relation: user
+        select: concat(first_name, ' ', last_name)
+        searchable: 0
+        sortable: 1
+    created_at:
+        label: bombozama.otlt::lang.columns.created_at
+        type: datetime
+        format: d-m-Y h:i
+        searchable: 0
+        sortable: 1
+    updated_at:
+        label: bombozama.otlt::lang.columns.updated_at
+        type: datetime
+        format: d-m-Y h:i
+        searchable: 0
+        sortable: 1
+        invisible: 1

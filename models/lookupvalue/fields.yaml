@@ -1,0 +1,17 @@
+fields:
+    name:
+        label: bombozama.otlt::lang.fields.name.label
+        type: text
+        span: auto
+        required: 1
+    extra:
+        label: bombozama.otlt::lang.fields.extra.label
+        type: text
+        span: auto
+    is_published:
+        label: bombozama.otlt::lang.fields.is_published.label
+        comment: bombozama.otlt::lang.fields.is_published.comment
+        type: switch
+        span: auto
+        required: 1
+        default: 1

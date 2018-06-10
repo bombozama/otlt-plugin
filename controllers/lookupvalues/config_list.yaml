@@ -1,0 +1,12 @@
+list: $/bombozama/otlt/models/lookupvalue/columns.yaml
+modelClass: Bombozama\OTLT\Models\LookupValue
+recordUrl: 'bombozama/otlt/lookupvalues/update/:category/:id'
+
+noRecordsMessage: backend::lang.list.no_records
+showCheckboxes: 1
+showSetup: 1
+recordsPerPage: 10
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

@@ -1,0 +1,7 @@
+scopes:
+    published:
+        label: bombozama.otlt::lang.scopes.published
+        type: switch
+        conditions:
+            - is_published <> true
+            - is_published = true

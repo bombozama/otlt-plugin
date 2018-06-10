@@ -1,0 +1,9 @@
+form: $/bombozama/otlt/models/lookupvalue/fields.yaml
+modelClass: Bombozama\OTLT\Models\LookupValue
+defaultRedirect: 'bombozama/otlt/lookupvalues/index/:category'
+create:
+    redirect: 'bombozama/otlt/lookupvalues/update/:category/:id'
+    redirectClose: 'bombozama/otlt/lookupvalues/index/:category'
+update:
+    redirect: 'bombozama/otlt/lookupvalues/update/:category/:id'
+    redirectClose: 'bombozama/otlt/lookupvalues/index/:category'
