@@ -9,6 +9,12 @@ columns:
         type: text
         searchable: 1
         sortable: 1
+    extra:
+        label: bombozama.otlt::lang.columns.extra
+        type: text
+        searchable: 1
+        sortable: 1
+        invisible: 1
     is_published:
         label: bombozama.otlt::lang.columns.is_published
         type: switch
