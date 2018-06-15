@@ -3,6 +3,7 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 use Lang;
+use System\Classes\SettingsManager;
 
 class LookupValues extends Controller
 {
@@ -10,6 +11,7 @@ class LookupValues extends Controller
     public $langPath = 'bombozama.otlt::lang';
     public $currentPlugin = 'Bombozama.OTLT';
     public $mainMenu = 'lookupvalues';
+    public $asSetting = true;
 
     public $implement = [
         'Backend.Behaviors.FormController',
@@ -25,6 +27,10 @@ class LookupValues extends Controller
     {
         parent::__construct();
         BackendMenu::setContext($this->currentPlugin, $this->mainMenu, snake_case(class_basename($this)));
+
+        if($this->asSetting){
+            SettingsManager::setContext('October.Backend', snake_case(class_basename($this)));
+        }
     }
 
     /**
