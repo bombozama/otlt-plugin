@@ -14,8 +14,8 @@ class LookupValues extends Controller
     public $asSetting = true;
 
     public $implement = [
-        'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController',
+        \Backend\Behaviors\FormController::class,
+        \Backend\Behaviors\ListController::class,
     ];
 
     public $formConfig = 'config_form.yaml';
