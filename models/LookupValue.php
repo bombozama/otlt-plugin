@@ -34,12 +34,23 @@ class LookupValue extends Model
         $this->category = snake_case(class_basename($this));
 
         # Set the lookupvalue slug
-        $this->slug = snake_case($this->name);
+        if($this->slug == '')
+            $this->slug = snake_case($this->name);
+        else
+            $this->slug = snake_case($this->slug);
     }
 
     public function scopePublished($query)
     {
         return $query->where('is_published', 1);
+    }
+
+    public function getSelectInputData()
+    {
+        return LookupValue::where('category', snake_case(class_basename($this)))
+                    ->get()
+                    ->pluck('name', 'id')
+                    ->toArray();
     }
 
     public static function getListConfigPath()
