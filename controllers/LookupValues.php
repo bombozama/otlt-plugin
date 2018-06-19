@@ -26,11 +26,15 @@ class LookupValues extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext($this->currentPlugin, $this->mainMenu, snake_case(class_basename($this)));
 
         if($this->asSetting){
-            SettingsManager::setContext('October.Backend', snake_case(class_basename($this)));
+            BackendMenu::setContext('October.System', 'system', 'settings');
+            SettingsManager::setContext($this->currentPlugin, end($this->params));
+        } else {
+            BackendMenu::setContext($this->currentPlugin, $this->mainMenu, end($this->params));
         }
+
+        reset($this->params);
     }
 
     /**
