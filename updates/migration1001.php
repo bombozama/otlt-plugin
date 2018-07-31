@@ -14,7 +14,7 @@ class Migration1002 extends Migration
             $table->string('slug')->collation('latin1_general_ci')->nullable();
             $table->string('name')->nullable();
             $table->string('extra')->nullable();
-            $table->boolean('is_published')->nullable();
+            $table->boolean('is_published')->nullable()->default(0);
             $table->integer('user_id')->nullable()->unsigned();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

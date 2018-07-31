@@ -35,9 +35,7 @@ class LookupValue extends Model
 
         # Set the lookupvalue slug
         if($this->slug == '')
-            $this->slug = snake_case($this->name);
-        else
-            $this->slug = snake_case($this->slug);
+            $this->slug = str_slug(strtolower($this->name), '_');
     }
 
     public function scopePublished($query)
